@@ -1,0 +1,54 @@
+{
+  "name": "yml-utils",
+  "version": "0.0.1",
+  "description": "前端常用函数工具库",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -w -c",
+    "build:types": "tsc -b ./tsconfig.json",
+    "build": "npm run build:types && rollup -c",
+    "prepublish": "pnpm version && pnpm build",
+    "lint": "eslint . --ext .js,.ts --fix",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yml-qq/yml-utils.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "yml",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/yml-qq/yml-utils/issues"
+  },
+  "homepage": "https://github.com/yml-qq/yml-utils#readme",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.1.2",
+    "prettier": "^2.7.1"
+  }
+}
