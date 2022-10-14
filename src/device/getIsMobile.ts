@@ -24,7 +24,7 @@ function createMatch(userAgent: string): (regex: RegExp) => boolean {
  * @desc 获取是否为移动端
  * @return {Boolean}
  */
-export const getIsMobile = (): boolean => {
+export const getIsMobile = (device: string): boolean => {
   let userAgent = navigator.userAgent;
   let tmp = userAgent.split("[FBAN");
 
